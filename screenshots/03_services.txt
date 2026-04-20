@@ -1,0 +1,3 @@
+NAME                TYPE        CLUSTER-IP      EXTERNAL-IP   PORT(S)        AGE
+kubernetes          ClusterIP   10.43.0.1       <none>        443/TCP        43m
+login-app-service   NodePort    10.43.149.157   <none>        80:30080/TCP   26m
