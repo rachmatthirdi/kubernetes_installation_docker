@@ -283,3 +283,21 @@ kubectl apply -f k8s-dash.yaml
      kubectl create token widhi -n kube-system
 
 
+## Implementasi dengan k3d (Metode Alternatif)
+
+Dikarenakan keterbatasan resource (laptop 12GB RAM), cluster diimplementasikan menggunakan **k3d** (Kubernetes in Docker) yang lebih ringan.
+
+### Spesifikasi Cluster
+- **Tools:** k3d v5.8.3 + K3s v1.31.5
+- **Node:** 1 master (control-plane) + 2 worker
+- **Aplikasi:** login-app dengan 3 replicas (image: nginx:latest)
+- **Service:** NodePort 30080
+
+### Hasil Deployment
+- Screenshot tersedia di folder `/screenshots`
+- Identitas pengembang: `/IDENTITY.md`
+
+### Cara akses aplikasi
+```bash
+curl http://localhost:30080
+# atau buka browser di http://localhost:30080
